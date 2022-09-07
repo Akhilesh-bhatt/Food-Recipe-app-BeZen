@@ -48,7 +48,6 @@ function Profile() {
           data: listing.data(),
         });
       });
-      console.log(listings)
       setListings(listings);
       setLoading(false);
     };

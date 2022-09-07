@@ -19,10 +19,9 @@ function Search() {
 
   useEffect(() => {
     const searchRecipes = listings?.filter(
-      (recipe) => recipe.data.title === text
+      (recipe) => recipe.data.title.toLowerCase().includes(text.toLowerCase())
     );
     setSearchedRecipes(searchRecipes);
-    console.log(searchRecipes)
   }, [listings])
 
   const handleChange = (e) => {
