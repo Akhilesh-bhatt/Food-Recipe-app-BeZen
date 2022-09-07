@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
-import homeIcon from "../assets/svg/homeIcon.svg";
+import foodIcon from "../assets/jpg/food.png";
 import arrowRight from "../assets/svg/keyboardArrowRightIcon.svg";
 import ListingItem from "../components/ListingItem";
 
@@ -148,14 +148,14 @@ function Profile() {
           </div>
 
           <Link className="createListing" to="/createlisting">
-            <img src={homeIcon} alt="Home" />
+            <img src={foodIcon} height="24px" width="24px" alt="Home" />
             <p>Add your food recipe</p>
             <img src={arrowRight} alt="Arrow Right" />
           </Link>
 
           {!loading && listings?.length > 0 && (
             <>
-              <p className="listingText">Your Recipes</p>
+              <h2 className="listingText">Your Recipes</h2>
               <ul className="listingList">
                 {listings.map((listing) => (
                   <ListingItem
