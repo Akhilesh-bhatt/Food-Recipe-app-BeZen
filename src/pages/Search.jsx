@@ -5,15 +5,12 @@ import Spinner from "../components/Spinner";
 import {
   collection,
   getDocs,
-  orderBy,
-  where,
   limit,
-  startAfter,
   query,
 } from "firebase/firestore";
 import ListingItem from "../components/ListingItem";
 
-function Offer() {
+function Search() {
   const [text, setText] = useState("");
   const [searchedRecipes, setSearchedRecipes] = useState([]);
   const [listings, setListings] = useState(null);
@@ -113,4 +110,4 @@ function Offer() {
   );
 }
 
-export default Offer;
+export default Search;
